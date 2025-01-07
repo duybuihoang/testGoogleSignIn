@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "729184886702",
+    "firebase_url": "https://appcyclone-1b8d4-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "appcyclone-1b8d4",
+    "storage_bucket": "appcyclone-1b8d4.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:729184886702:android:92f27536963a736dd9f23f",
+        "android_client_info": {
+          "package_name": "com.cocolap.TestGooleSignIn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "729184886702-2l71knis0pvvner2q0dftop7a4tgsr4b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cocolap.TestGooleSignIn",
+            "certificate_hash": "567093218a3813cd050f60d8d8ced23df4e5222d"
+          }
+        },
+        {
+          "client_id": "729184886702-el87scsfm74k3be1mffj9i3g77e37375.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGt7NG7L7VFHDZRxKcGZ9wbT26d7JDUIs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "729184886702-el87scsfm74k3be1mffj9i3g77e37375.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
