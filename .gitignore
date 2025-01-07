@@ -72,5 +72,7 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
 # Firebase SDK
-Assets/Firebase/
-Assets/Plugins/
+Assets/Firebase/*
+Assets/Plugins/*
+Assets/FacebookSDK/*
+Assets/GoogleMobileAds/*
