@@ -1,5 +1,6 @@
 <dependencies>
   <packages>
+    <package>androidx.constraintlayout:constraintlayout:2.1.4</package>
     <package>com.android.support:appcompat-v7:25.3.1</package>
     <package>com.android.support:cardview-v7:25.3.1</package>
     <package>com.android.support:customtabs:25.3.1</package>
@@ -9,8 +10,10 @@
     <package>com.facebook.android:facebook-gamingservices:[17.0.0,18)</package>
     <package>com.facebook.android:facebook-login:[17.0.0,18)</package>
     <package>com.facebook.android:facebook-share:[17.0.0,18)</package>
+    <package>com.google.android.gms:play-services-ads:23.0.0</package>
     <package>com.google.android.gms:play-services-auth:16+</package>
     <package>com.google.android.gms:play-services-base:18.5.0</package>
+    <package>com.google.android.ump:user-messaging-platform:2.2.0</package>
     <package>com.google.firebase:firebase-analytics:22.1.2</package>
     <package>com.google.firebase:firebase-app-unity:12.5.0</package>
     <package>com.google.firebase:firebase-auth:23.1.0</package>
@@ -18,6 +21,8 @@
     <package>com.google.firebase:firebase-common:21.0.0</package>
     <package>com.google.firebase:firebase-database:21.0.0</package>
     <package>com.google.firebase:firebase-database-unity:12.5.0</package>
+    <package>com.google.firebase:firebase-firestore:25.1.1</package>
+    <package>com.google.firebase:firebase-firestore-unity:12.5.0</package>
     <package>com.google.signin:google-signin-support:1.0.4</package>
     <package>com.parse.bolts:bolts-android:1.4.0</package>
   </packages>
@@ -28,6 +33,8 @@
     <file>Assets/GeneratedLocalRepo/Firebase/m2repository/com/google/firebase/firebase-auth-unity/12.5.0/firebase-auth-unity-12.5.0.pom</file>
     <file>Assets/GeneratedLocalRepo/Firebase/m2repository/com/google/firebase/firebase-database-unity/12.5.0/firebase-database-unity-12.5.0.aar</file>
     <file>Assets/GeneratedLocalRepo/Firebase/m2repository/com/google/firebase/firebase-database-unity/12.5.0/firebase-database-unity-12.5.0.pom</file>
+    <file>Assets/GeneratedLocalRepo/Firebase/m2repository/com/google/firebase/firebase-firestore-unity/12.5.0/firebase-firestore-unity-12.5.0.aar</file>
+    <file>Assets/GeneratedLocalRepo/Firebase/m2repository/com/google/firebase/firebase-firestore-unity/12.5.0/firebase-firestore-unity-12.5.0.pom</file>
     <file>Assets/GeneratedLocalRepo/GoogleSignIn/Editor/m2repository/com/google/signin/google-signin-support/1.0.4/google-signin-support-1.0.4.aar</file>
     <file>Assets/GeneratedLocalRepo/GoogleSignIn/Editor/m2repository/com/google/signin/google-signin-support/1.0.4/google-signin-support-1.0.4.pom</file>
   </files>
