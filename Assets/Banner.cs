@@ -1,4 +1,4 @@
-/*using GoogleMobileAds;
+using GoogleMobileAds;
 using GoogleMobileAds.Api;
 using System;
 using UnityEngine;
@@ -125,4 +125,4 @@ public class Banner : MonoBehaviour
     }
 
 
-}*/
+}

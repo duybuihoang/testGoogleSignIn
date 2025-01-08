@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class AuthUIController : MonoBehaviour, IAuthObserver
 {
@@ -46,6 +47,14 @@ public class AuthUIController : MonoBehaviour, IAuthObserver
         if (user != null)
         {
             Debug.Log($"User signed in: {user.Email}");
+            Debug.Log(user.UserId);
+            Debug.Log(user.Email);
+            Debug.Log(user.IsAnonymous);
+            Debug.Log(user.Metadata);
+            Debug.Log(user.PhotoUrl);
+            Debug.Log(user.ProviderData);
+
+            
             // Update UI for signed-in state
         }
         else
@@ -80,7 +89,9 @@ public class AuthUIController : MonoBehaviour, IAuthObserver
 
         try
         {
-            await FirebaseAuthManager.Instance.SignInWith(AuthProvider.Facebook);
+            var user = await FirebaseAuthManager.Instance.SignInWith(AuthProvider.Facebook);
+            SceneManager.LoadScene("Gameplay");
+
         }
         catch (System.Exception e)
         {
@@ -94,7 +105,8 @@ public class AuthUIController : MonoBehaviour, IAuthObserver
 
         try
         {
-            await FirebaseAuthManager.Instance.SignInWith(AuthProvider.Anonymous);
+            FirebaseUser User =  await FirebaseAuthManager.Instance.SignInWith(AuthProvider.Anonymous);
+            Debug.Log("login: " + User.DisplayName);
         }
         catch (System.Exception e)
         {

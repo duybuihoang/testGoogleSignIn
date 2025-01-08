@@ -924,7 +924,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 496702906}
-  - component: {fileID: 496702905}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -932,18 +931,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &496702905
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 496702904}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc17afbe96808094ebddf2e00294e665, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &496702906
 Transform:
   m_ObjectHideFlags: 0
@@ -1234,7 +1221,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 754906643}
-  - component: {fileID: 754906642}
   - component: {fileID: 754906641}
   - component: {fileID: 754906640}
   - component: {fileID: 754906639}
@@ -1308,21 +1294,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &754906642
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 754906638}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd0af14f18e4a5345aead81e55cee164, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GoogleButton: {fileID: 564292742}
-  FacebookButton: {fileID: 0}
-  XButton: {fileID: 0}
 --- !u!224 &754906643
 RectTransform:
   m_ObjectHideFlags: 0

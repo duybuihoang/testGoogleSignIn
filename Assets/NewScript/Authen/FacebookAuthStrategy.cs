@@ -6,6 +6,8 @@ using UnityEngine;
 using Facebook.Unity;
 using Firebase.Extensions;
 using System;
+using Firebase;
+
 
 public class FacebookAuthStrategy : IAuthStrategy
 {
@@ -58,19 +60,44 @@ public class FacebookAuthStrategy : IAuthStrategy
                 Debug.Log("signinng");
 
                 var token = AccessToken.CurrentAccessToken.TokenString;
-                Debug.Log(token);
                 var credential = FacebookAuthProvider.GetCredential(token);
-                Debug.Log(credential);
-
                 var authResult = await auth.SignInWithCredentialAsync(credential);
+
                 authTaskCompletionSource.SetResult(authResult);
-                Debug.Log("signin");
             }
-            catch (Exception e)
+            catch (FirebaseException e ) when((AuthError)e.ErrorCode == AuthError.AccountExistsWithDifferentCredentials)
             {
-                Debug.LogError($"Firebase auth with Facebook credential failed: {e.Message}");
-                authTaskCompletionSource.SetException(e);
-            }
+                    FB.API("/me?fields=email", HttpMethod.GET,async fbResult =>
+                    {
+                        if (!string.IsNullOrEmpty(fbResult.Error))
+                        {
+                            Debug.LogError($"Error fetching email: {fbResult.Error}");
+                            authTaskCompletionSource.SetException(new Exception(fbResult.Error));
+                        }
+                        else
+                        {
+                            try
+                            {
+                                var email = fbResult.ResultDictionary["email"].ToString();
+                                Debug.Log($"Fetched email: {email}");
+                                var providers = await auth.FetchProvidersForEmailAsync(email);
+                                Debug.Log(providers);
+                                var availableProviders = string.Join(", ", providers);
+                                var errorMessage = $"This email is already registered. Please sign in using one of these methods: {availableProviders}";
+                                Debug.LogWarning(errorMessage);
+                                authTaskCompletionSource.SetException(new Exception(errorMessage));
+                            }
+                            catch (Exception innerEx)
+                            {
+                                Debug.LogError($"Error while handling existing account: {innerEx.Message}");
+                                authTaskCompletionSource.SetException(innerEx);
+                            }
+                        }
+                    });
+
+                }
+
+            
         }    
         else
         {

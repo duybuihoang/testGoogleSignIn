@@ -106,4 +106,5 @@ public class FirebaseAuthManager : MonoBehaviour
             currentStrategy = null;
         }
     }
+ 
 }
